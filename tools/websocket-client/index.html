@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html lang="en-PH">
+	<head>
+		<meta charset="utf-8">
+		<title>Websocket Client</title>
+		<style>
+			form {
+				margin: 2em 0;
+			}
+
+			fieldset {
+				display: contents;
+			}
+
+			legend {
+				position: absolute;
+				left: -999999px;
+			}
+
+			legend ~ div {
+				margin: 0.5em 0;
+			}
+
+			legend ~ div > div {
+				display: flex;
+				gap: 0.5em;
+			}
+
+			legend ~ div > div :first-child {
+				flex: auto;
+			}
+
+			legend ~ div > div :first-child > label {
+				display: block;
+				width: 100%;
+			}
+
+			legend ~ div > div :first-child > label > input {
+				display: block;
+				width: 100%;
+				box-sizing: border-box;
+			}
+
+			label {
+				position: relative;
+			}
+
+			label > span {
+				position: absolute;
+				left: -999999px;
+			}
+
+			label + input[type="checkbox"] {
+				position: absolute;
+				left: -999999px;
+			}
+
+			textarea {
+				width: 100%;
+				box-sizing: border-box;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Websocket Client</h1>
+		<form
+			id="formConnection"
+		>
+			<fieldset>
+				<legend>Server</legend>
+				<div>
+					<div>
+						<div>
+							<label>
+								<span>URL</span>
+								<input
+									type="url"
+									name="serverUrl"
+									autocomplete="off"
+									value="ws://localhost:42069"
+									required
+								>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<div>
+							<label>
+								<span>Username</span>
+								<input
+									type="text"
+									name="username"
+									autocomplete="off"
+									value="Web"
+									required
+								>
+							</label>
+						</div>
+					</div>
+				</div>
+				<button
+					type="submit"
+					name="connect"
+				>
+					Connect
+				</button>
+			</fieldset>
+		</form>
+		<form
+			id="formMessage"
+		>
+			<fieldset
+				name="fieldset"
+				disabled
+			>
+				<legend>Message</legend>
+				<div>
+					<div>
+						<div>
+							<label>
+								<span>Message</span>
+								<input
+									type="text"
+									value=""
+									autocomplete="off"
+									name="message"
+									placeholder="Type your message"
+								>
+							</label>
+							<input
+								type="checkbox"
+								name="binary"
+								readonly
+								tabindex="-1"
+							/>
+						</div>
+						<button
+							type="submit"
+						>
+							Send as Text (Enter)
+						</button>
+						<button
+							name="submitBinary"
+							type="button"
+						>
+							Send as Binary (Shift + Enter)
+						</button>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+		<form
+			id="formLogs"
+		>
+			<fieldset>
+				<legend>Logs</legend>
+				<div>
+					<label>
+						<span>Logs</span>
+						<textarea
+							rows="10"
+							cols="50"
+							name="logs"
+							readonly
+						></textarea>
+					</label>
+				</div>
+				<button
+					type="submit"
+				>
+					Clear Logs
+				</button>
+			</fieldset>
+		</form>
+		<script src="index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+{
+	"deploy": {
+		"zeroInterpolation": "set",
+		"components": {
+			"SlideBack": {
+				0: { "translate": [0, 0] },
+				0.25: { "translate": [-1.5, 0] },
+				1: { "translate": [0, 0], "interpolation": "ease-in" }
+			},
+			"SlideFront": {
+				0: { "translate": [0, 0] },
+				0.25: { "translate": [-1.5, 0] },
+				1: { "translate": [0, 0], "interpolation": "ease-in" }
+			}
+		}
+	}
+}

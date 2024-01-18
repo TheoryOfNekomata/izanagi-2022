@@ -1,0 +1,7 @@
+[wrap-git]
+url = https://github.com/grassator/bdd-for-c.git
+revision = head
+depth = 1
+
+[provide]
+bdd_for_c = bdd_for_c_dep

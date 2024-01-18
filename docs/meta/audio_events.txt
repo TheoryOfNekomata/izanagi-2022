@@ -1,0 +1,13 @@
+0_deploy
+1_unload
+2_shell_out
+3_pump_start
+4_pump_end
+5_init_reload
+6_clip_out_start
+7_clip_out_end
+8_clip_in_start
+9_clip_in_end
+a_shell_in
+b_shell_feed
+c_ready

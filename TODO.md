@@ -1,0 +1,43 @@
+- [ ] Organize dependencies
+- [X] Improve logging (remove SDL/lws dependency)
+	- [ ] Remove `lwsl_user` calls
+- [X] Unify memset/memcpy/free/malloc functions (remove SDL/lws dependency)
+- [ ] Revisit unit tests
+- [ ] Implement character sprites + animations
+	- [ ] Finalize initial character sprite for rendering
+		- [X] Acquire Affinity Designer (so we can move on from Corel)
+- [ ] Implement SVG parser and manipulator (for animations) (should we implement stop-motion animation instead of interpolations for now?)
+- [ ] Implement memory pool
+- [ ] Fix gamepad mapping
+	- [ ] Unify mapping (e.g. north button, west button for different buttons etc.)
+	- [ ] Provide default mapping
+	- [ ] Allow customization of button mappings
+- [ ] Authentication server, using HTTP dynamic content
+	- [ ] server
+	- [ ] client (frontend)
+- [ ] Proof-of-concept for fast SVG rendering (we're going to use SVG instead of Spine)
+- [ ] Asset loading (finalize directory structure)
+	- [ ] Allow modding mechanism file system (7-zip)
+- [ ] Audio (SDL-mixer/Fmod)
+	- [ ] Fmod for sfx and MIDI (with DSP)
+	- [ ] https://github.com/libsndfile/libsndfile (load sound files as WAV, for Fmod playback)
+- [ ] Network buffer structure (shared object in server)
+- [ ] Gfx rendering API (bgfx, as long as not raw OpenGL) --- important, for Miyagi
+	- [ ] Imgui-C for GUI
+	- [ ] Define subcategories of rendering
+		- 2d raster
+		- 2d vector
+		- 2d lighting system
+		- 2d special effects (e.g. particles)
+	- [ ] Animation system
+		- [ ] How to trigger sounds, events, into keyframes
+		- [ ] How to attach objects to different bones
+- [ ] Physics (Box2D)
+- [ ] Draft game design --- for neko
+- [ ] Entity system
+	- [ ] ECS/non-ECS
+- [ ] Console (RCON) --- important (also for debugging) for Jed
+	- [ ] Commands
+	- [ ] Config
+- [ ] Level editor (prefabs can be expressed in scripting system)
+	- [ ] Level format (how to lay out level as data)

@@ -1,0 +1,8 @@
+[wrap-git]
+url = https://code.modal.sh/TheoryOfNekomata/ini-config.git
+revision = head
+method = cmake
+clone-recursive = true
+
+[provide]
+ini_config = ini_config_dep

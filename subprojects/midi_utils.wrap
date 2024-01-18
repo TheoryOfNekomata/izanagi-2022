@@ -1,0 +1,7 @@
+[wrap-git]
+url = https://code.modal.sh/TheoryOfNekomata/midi-utils.git
+revision = head
+method = cmake
+
+[provide]
+midi_utils = midi_utils_dep

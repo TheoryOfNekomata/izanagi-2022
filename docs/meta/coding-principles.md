@@ -1,0 +1,2 @@
+- Always check bounds before performing mutations (i.e. CRUD operations).
+- Prefer declaring out variables over malloc'd variables.

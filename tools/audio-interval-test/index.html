@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+	<head>
+		<meta charset="UTF-8">
+		<title>Audio Interval Test</title>
+		<style>
+			label {
+				position: relative;
+			}
+
+			label > span {
+				position: absolute;
+				left: -999999px;
+			}
+
+			label + input[type="checkbox"] {
+				position: absolute;
+				left: -999999px;
+			}
+		</style>
+	</head>
+	<body>
+		<form id="formAudio">
+			<fieldset>
+				<legend>
+					Repeating Sounds
+				</legend>
+				<div>
+					<label>
+						<span>Interval (bpm)</span>
+						<input
+							type="number"
+							name="interval"
+							value="750"
+							min="100"
+							max="1000"
+						/>
+					</label>
+					<input
+						type="checkbox"
+						name="play"
+						readonly
+						tabindex="-1"
+						checked
+					/>
+				</div>
+				<div>
+					<label>
+						<span>Interval (ms)</span>
+						<output>-</output>
+					</label>
+				</div>
+				<button type="submit">
+					Toggle Sound
+				</button>
+			</fieldset>
+		</form>
+		<script src="index.js"></script>
+	</body>
+</html>

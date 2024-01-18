@@ -1,0 +1,13 @@
+[wrap-file]
+directory = libwebsockets-v4.3.2
+source_url = https://libwebsockets.org/git/libwebsockets/snapshot/libwebsockets-v4.3.2.tar.xz
+source_filename = libwebsockets-v4.3.2.tar.xz
+source_hash = 287ad6f63344323c4e2404d2ab3a8a0803932d554c724aaffbb1e8fe2e5e9243
+patch_filename = libwebsockets_4.3.2-3_patch.zip
+patch_url = https://wrapdb.mesonbuild.com/v2/libwebsockets_4.3.2-3/get_patch
+patch_hash = f7b2129df2813a7250c21c90102b25b013c5604d01727209fed93bd12a31dd9c
+source_fallback_url = https://github.com/mesonbuild/wrapdb/releases/download/libwebsockets_4.3.2-3/libwebsockets-v4.3.2.tar.xz
+wrapdb_version = 4.3.2-3
+
+[provide]
+libwebsockets = libwebsockets_dep

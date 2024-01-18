@@ -1,0 +1,7 @@
+[wrap-git]
+url = https://github.com/PortMidi/portmidi.git
+revision = head
+method = cmake
+
+[provide]
+portmidi = portmidi_dep
