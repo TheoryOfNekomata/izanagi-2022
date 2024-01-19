@@ -1,7 +1,8 @@
 project(
-	'izanagi', 'c',
-  version: '0.1',
-  default_options: ['warning_level=3']
+	'izanagi',
+	'c',
+	version: '0.1',
+	default_options: ['warning_level=3', 'default_library=static']
 )
 
 add_global_arguments('-DIZ_APP_NAME="Izanagi"', language: 'c')
@@ -12,18 +13,22 @@ add_global_arguments('-DIZ_PLAYERS=1', language: 'c')
 add_global_arguments('-DIZ_LOG_DATE_FUNCTION=IZ_TimerNow', language: 'c')
 add_global_arguments('-DIZ_CONFIG_GAME_PATH="config-game.ini"', language: 'c')
 add_global_arguments('-DIZ_CONFIG_SERVER_PATH="config-server.ini"', language: 'c')
-add_global_arguments('-DIZ_MACOS', language: 'c')
+add_global_arguments('-DIZ_WIN64', language: 'c')
+add_global_arguments('-DIZ_WINDOWS', language: 'c')
+add_global_arguments('-DWIN32', language: 'c')
+# add_global_arguments('-DIZ_MACOS', language: 'c')
 
 sdl2_dep = dependency('sdl2')
 sdl2_image_dep = dependency('sdl2_image')
+freetype2_dep = dependency('freetype2')
 sdl2_ttf_dep = dependency('sdl2_ttf')
 ini_config_dep = dependency('ini_config')
 midi_utils_dep = dependency('midi_utils')
-lws_dep = dependency('libwebsockets')
-portmidi_dep = dependency('portmidi')
+lws_dep = dependency('libwebsockets', native: true)
+portmidi_dep = dependency('portmidi', native: true)
 
 game = executable(
-  'game',
+	'game',
 	[
 		'src/packages/game/output/video/IZ_video.h',
 		'src/packages/game/output/video/IZ_video.c',
@@ -89,15 +94,17 @@ game = executable(
 		'src/packages/game/output/audio/IZ_audio.c',
 		'src/packages/game/output/audio/IZ_audio.h'
 	],
+	win_subsystem: 'windows',
 	install: true,
-  dependencies: [
-  	ini_config_dep,
-  	midi_utils_dep,
-  	portmidi_dep,
-  	sdl2_dep,
-  	sdl2_ttf_dep,
-  	sdl2_image_dep,
-  	lws_dep
+	dependencies: [
+  		ini_config_dep,
+		freetype2_dep,
+  		midi_utils_dep,
+  		portmidi_dep,
+  		sdl2_dep,
+  		sdl2_ttf_dep,
+  		sdl2_image_dep,
+  		lws_dep
 	]
 )
 

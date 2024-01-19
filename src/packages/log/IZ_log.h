@@ -19,10 +19,10 @@
 #define IZ_LOG_WIDTH_TIMESTAMP "24"
 #define IZ_LOG_WIDTH_CATEGORY "14"
 
-#include <SDL2/SDL_filesystem.h>
+#include "SDL_filesystem.h"
 #if defined IZ_WINDOWS
 #include <io.h>
-#include <SDL2/SDL_syswm.h>
+#include "SDL_syswm.h"
 #elif defined IZ_MACOS
 #include <unistd.h>
 #elif defined IZ_UNIX

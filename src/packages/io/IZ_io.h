@@ -3,7 +3,7 @@
 
 #if defined IZ_WINDOWS
 #include <io.h>
-#include <SDL2/SDL_syswm.h>
+#include "SDL_syswm.h"
 #elif defined IZ_UNIX
 #include <sys/stat.h>
 #elif defined IZ_MACOS

@@ -1,7 +1,7 @@
 #ifndef IZ_CONFIG_GUID_H
 #define IZ_CONFIG_GUID_H
 
-#include <SDL2/SDL_guid.h>
+#include "SDL_guid.h"
 #include "ini-config.h"
 #include "minIni.h"
 

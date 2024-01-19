@@ -1,8 +1,8 @@
 #ifndef IZ_KEYBOARD_H
 #define IZ_KEYBOARD_H
 
-#include <SDL2/SDL_keyboard.h>
-#include <SDL2/SDL_events.h>
+#include "SDL_keyboard.h"
+#include "SDL_events.h"
 #include "ini-config.h"
 #include "types/int.h"
 #include "../../stdinc/IZ_string.h"

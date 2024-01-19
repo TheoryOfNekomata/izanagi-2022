@@ -4,7 +4,7 @@
 #include <string.h>
 #if defined IZ_WINDOWS
 #include <io.h>
-#include <SDL2/SDL_syswm.h>
+#include "SDL_syswm.h"
 #elif defined IZ_MACOS
 #include <unistd.h>
 #elif defined IZ_UNIX

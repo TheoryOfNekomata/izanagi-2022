@@ -1,7 +1,7 @@
 #ifndef IZ_APP_H
 #define IZ_APP_H
 
-#include <SDL2/SDL.h>
+#include "SDL.h"
 #include "libwebsockets.h"
 #include "asset/IZ_asset.h"
 #include "memory/IZ_pool.h"

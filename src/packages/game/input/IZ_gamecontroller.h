@@ -1,8 +1,8 @@
 #ifndef IZ_GAMECONTROLLER_H
 #define IZ_GAMECONTROLLER_H
 
-#include <SDL2/SDL_gamecontroller.h>
-#include <SDL2/SDL_events.h>
+#include "SDL_gamecontroller.h"
+#include "SDL_events.h"
 #include "ini-config.h"
 #include "types/int.h"
 #include "types/string.h"

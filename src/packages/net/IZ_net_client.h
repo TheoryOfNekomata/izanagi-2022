@@ -1,7 +1,7 @@
 #ifndef IZ_NET_CLIENT_H
 #define IZ_NET_CLIENT_H
 
-#include <SDL2/SDL_thread.h>
+#include "SDL_thread.h"
 #include "ini-config.h"
 #include "types/int.h"
 #include "types/string.h"

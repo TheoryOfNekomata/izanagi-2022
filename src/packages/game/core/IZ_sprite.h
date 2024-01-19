@@ -1,7 +1,7 @@
 #ifndef IZ_SPRITE_H
 #define IZ_SPRITE_H
 
-#include <SDL2/SDL_image.h>
+#include "SDL_image.h"
 #include "../geometry/IZ_vector2d.h"
 
 typedef struct {

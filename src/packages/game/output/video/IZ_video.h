@@ -2,8 +2,8 @@
 #define IZ_VIDEO_H
 
 #include <stdio.h>
-#include <SDL2/SDL_render.h>
-#include <SDL2/SDL_image.h>
+#include "SDL_render.h"
+#include "SDL_image.h"
 #include "ini-config.h"
 
 #include "../../../log/IZ_log.h"
