@@ -13,10 +13,18 @@ add_global_arguments('-DIZ_PLAYERS=1', language: 'c')
 add_global_arguments('-DIZ_LOG_DATE_FUNCTION=IZ_TimerNow', language: 'c')
 add_global_arguments('-DIZ_CONFIG_GAME_PATH="config-game.ini"', language: 'c')
 add_global_arguments('-DIZ_CONFIG_SERVER_PATH="config-server.ini"', language: 'c')
-add_global_arguments('-DIZ_WIN64', language: 'c')
-add_global_arguments('-DIZ_WINDOWS', language: 'c')
-add_global_arguments('-DWIN32', language: 'c')
-# add_global_arguments('-DIZ_MACOS', language: 'c')
+
+if target_machine.system() == 'windows'
+	add_global_arguments('-DIZ_WINDOWS', language: 'c')
+	add_global_arguments('-DWIN32', language: 'c')
+	if host_machine.cpu() == 'x86_64'
+		add_global_arguments('-DIZ_WIN64', language: 'c')
+	elif host_machine.cpu() == 'x86'
+		add_global_arguments('-DIZ_WIN32', language: 'c')
+	endif
+elif target_machine.system() == 'darwin'
+	add_global_arguments('-DIZ_MACOS', language: 'c')
+endif
 
 sdl2_dep = dependency('sdl2')
 sdl2_image_dep = dependency('sdl2_image')
@@ -94,8 +102,6 @@ game = executable(
 		'src/packages/game/output/audio/IZ_audio.c',
 		'src/packages/game/output/audio/IZ_audio.h'
 	],
-	win_subsystem: 'windows',
-	install: true,
 	dependencies: [
   		ini_config_dep,
 		freetype2_dep,

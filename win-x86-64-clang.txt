@@ -1,5 +1,13 @@
 [host_machine]
 system = 'windows'
+subsystem = 'windows'
+cpu_family = 'x86_64'
+cpu = 'x86_64'
+endian = 'little'
+
+[target_machine]
+system = 'windows'
+subsystem = 'windows'
 cpu_family = 'x86_64'
 cpu = 'x86_64'
 endian = 'little'
