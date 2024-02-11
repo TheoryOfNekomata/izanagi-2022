@@ -19,7 +19,7 @@ Ensure that these tools are accessible under `PATH`.
 Run the following Meson commands in order:
 
 ```shell
-meson setup build
+meson setup --cross-file win-x86-64-clang.txt build
 meson subprojects download
 ```
 

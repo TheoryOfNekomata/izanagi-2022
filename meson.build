@@ -28,7 +28,6 @@ endif
 
 sdl2_dep = dependency('sdl2')
 sdl2_image_dep = dependency('sdl2_image')
-freetype2_dep = dependency('freetype2')
 sdl2_ttf_dep = dependency('sdl2_ttf')
 ini_config_dep = dependency('ini_config')
 midi_utils_dep = dependency('midi_utils')
@@ -104,7 +103,6 @@ game = executable(
 	],
 	dependencies: [
   		ini_config_dep,
-		freetype2_dep,
   		midi_utils_dep,
   		portmidi_dep,
   		sdl2_dep,
