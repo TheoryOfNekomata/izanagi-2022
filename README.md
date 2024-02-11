@@ -20,6 +20,7 @@ Run the following Meson commands in order:
 
 ```shell
 meson setup build
+meson subprojects download
 ```
 
 Build the libwebsockets subproject to get a config for your environment.
